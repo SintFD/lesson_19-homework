@@ -1,17 +1,37 @@
 // $colors: (
-//   "primary": red,
-//   "accent": blue,
+//   "primary": #f6b100,
+//   "secondary": #181a20,
+//   "quick-silver": #9f9f9f,
+//   "lotion": #fcfcfc,
 // );
-
-// $colors-dark: (
-//   "primary": rgb(26, 53, 1),
-//   "accent": rgb(61, 4, 58),
-// );
-
-// @function getColorDark($key) {
-//   @return map-get($colors-dark, $key);
-// }
 
 // @function getColor($key) {
 //   @return map-get($colors, $key);
 // }
+
+$themes: (
+  light: (
+    background: #ffffff,
+    text: #000000,
+  ),
+  dark: (
+    background: #000000,
+    text: #ffffff,
+  ),
+  sepia: (
+    background: #f5e6d7,
+    text: #5b4636,
+  ),
+);
+
+// @mixin theme($background) {
+//   @return $background;
+// }
+
+@function getTheme($key) {
+  @return map-get($themes, $key);
+}
+
+@function getItem($key) {
+  @return map-get($themes, $key);
+}
