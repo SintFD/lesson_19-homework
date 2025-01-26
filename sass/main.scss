@@ -1,0 +1,20 @@
+@import "./utils/normalize";
+@import "./utils/fonts";
+@import "./utils/variable";
+@import "./utils/colors";
+@import "./components/base";
+@import "./utils/placeholders";
+@import "./utils/mixin";
+
+.list {
+  margin: 0 auto;
+  display: flex;
+  width: 300px;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+
+  @include card(10px 10px lightblue, 20px, 100px);
+}
