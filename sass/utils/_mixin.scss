@@ -4,6 +4,22 @@
   border-radius: $border-radius;
 }
 
-// @mixin theme($background) {
-//   @return $background;
-// }
+@mixin responsive-margin($margin, $device) {
+  @if ($device == "mobile") {
+    margin: $margin;
+  }
+  @if ($device == "tablet") {
+    margin: $margin;
+  }
+  @if ($device == "desktop") {
+    margin: $margin;
+  }
+}
+
+@mixin size($font-size) {
+  line-height: $font-size * 1.5;
+}
+
+@mixin border($color) {
+  border: 10px solid $color;
+}
